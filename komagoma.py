@@ -13,7 +13,7 @@ from asobi_list import gacha_list
 from asobi_list import gaba_list
 import os
 
-TOKEN = "OTQ0MTA4MDQ1OTAwODU3Mzc0.Yg8zIg.IM_WOIFfpIatX2ILhMidNBbNCD8" #トークン
+TOKEN = "TOKEN" #トークン
 CHANNEL_ID = 1003266745043275857 #チャンネルID
 TEST_ID = 1004391737613103215
 
