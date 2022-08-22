@@ -14,8 +14,8 @@ from asobi_list import gaba_list
 import os
 
 TOKEN = "TOKEN" #トークン
-CHANNEL_ID = 1003266745043275857 #チャンネルID
-TEST_ID = 1004391737613103215
+CHANNEL_ID = 12345 #チャンネルID
+TEST_ID = 67890
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
@@ -83,7 +83,7 @@ async def on_voice_state_update(member, before, after):
         botRoom = client.get_channel(CHANNEL_ID)
         
         # 入室通知
-        if after.channel.id == 894637253358387291:
+        if after.channel.id == 1234567890:
             await botRoom.send("寝落ちした" + member.name + "さんｶﾜｲｲﾔｯﾀｰ!")
 
 @client.event
@@ -151,9 +151,9 @@ async def on_message(message):
                     await message.channel.send(m)
                     return
                
-          if re.match("(エンジィ|ｴﾝｼﾞｨ)…", message.content):
+          if re.match("(テスト|ﾃｽﾄ)…", message.content):
                if client.user != message.author:
-                    m = "ｴﾝｼﾞｨ……"
+                    m = "ﾃｽﾄ……"
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await message.channel.send(m)
                     return
@@ -163,7 +163,7 @@ async def on_message(message):
                     await message.channel.send("<:migawari:1003265684916154449><:Elfuun:1004356482663465012>")
                     return
 
-          if re.match("ｴｰﾌｨ(ｻﾝ|ﾁｬﾝ)ｶﾜｲｲﾔｯﾀｰ", message.content):
+          if re.match("〇〇(ｻﾝ|ﾁｬﾝ)ｶﾜｲｲﾔｯﾀｰ", message.content):
                if client.user != message.author:
                     await message.channel.send("<:emoji_8:957623561147809822>")
                     return
@@ -214,14 +214,14 @@ async def on_message(message):
                     return
 
           if re.search("(み|に)ゃ", message.content):
-               if message.author.id == 880592434554363934 or message.author.id == 572391918114177045 or message.author.id == 665868330909040641:
+               if message.author.id == user1 or message.author.id == user2 or message.author.id == user3:
                     m = "ﾈｺﾁｬﾝｶﾜｲｲﾔｯﾀｰ!"
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await message.channel.send(m)
                     return
                
           if re.search("(m|n)ya", message.content):
-               if message.author.id == 880592434554363934 or message.author.id == 572391918114177045 or message.author.id == 665868330909040641:
+               if message.author.id == user1 or message.author.id == user2 or message.author.id == user3:
                     m = "ﾈｺﾁｬﾝｶﾜｲｲﾔｯﾀｰ!"
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await message.channel.send(m)
@@ -229,7 +229,7 @@ async def on_message(message):
 
           if 'ｶﾜｲｲﾔｯﾀ' in message.content:
                if client.user != message.author:
-                    if message.content.startswith("ｺﾏｺﾞﾏｻﾝｶﾜｲｲﾔｯﾀｰ") or message.content.startswith("ｺﾏﾁｬﾝｶﾜｲｲﾔｯﾀｰ"):
+                    if message.content.startswith("女の子ｶﾜｲｲﾔｯﾀｰ") or message.content.startswith("○ﾁｬﾝｶﾜｲｲﾔｯﾀｰ"):
                          # メッセージを書きます
                          m = "ｿﾚﾅ"
                          # メッセージが送られてきたチャンネルへメッセージを送ります
@@ -299,7 +299,7 @@ async def on_message(message):
 
           if "スタッフクレジット" in message.content:
                if client.user != message.author:
-                    await message.channel.send('作者\n・クキソージ\n事の発端\n・アオイさん\n・ハーミィさん\n可愛い生物\n・こまごまさん\n~~共犯~~制作協力\n・丞吉さん\nスペシャルサンクス\n・不知火さん\n・秋雨さん\n・米塚さん\n・ハルフブキさん\n・エーフィさん\nAND YOU!')
+                    await message.channel.send('スタッフクレジット')
 
 #ループ処理実行
 loop.start()
