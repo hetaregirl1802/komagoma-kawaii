@@ -41,19 +41,19 @@ async def loop():
           if next_time:
                await channel.send("今ﾊ" + now_Japan + "ﾃﾞｽ")
                if now == "15:00":# 12時
-                    await channel.send('ｺﾏｺﾞﾏｻﾝｶﾜｲｲﾔｯﾀｰ!')
+                    await channel.send('〇〇ｻﾝｶﾜｲｲﾔｯﾀｰ!')
                     next_time = False
 
                elif now == "03:00":
-                    await channel.send('ｺﾏｺﾞﾏｻﾝｶﾜｲｲﾔｯﾀｰ!')
+                    await channel.send('〇〇ｻﾝｶﾜｲｲﾔｯﾀｰ!')
                     next_time = False
                     
                elif now == "18:00":# 18時と6時を指定すれば、3時に囀る
-                    await channel.send('ｻｻﾐｻﾝｶﾜｲｲﾔｯﾀｰ!')
+                    await channel.send('△△ｻﾝｶﾜｲｲﾔｯﾀｰ!')
                     next_time = False
                               
                elif now == "06:00":
-                    await channel.send('ｻｻﾐｻﾝｶﾜｲｲﾔｯﾀｰ!')
+                    await channel.send('△△ｻﾝｶﾜｲｲﾔｯﾀｰ!')
                     next_time = False
 
                elif now == "09:00":
@@ -96,7 +96,7 @@ async def on_message(message):
           if re.match("(さえず|囀)って|サエズッテ|ｻｴｽﾞｯﾃ", message.content):
                if client.user != message.author:
                     # メッセージを書きます
-                    m = "ｺﾏｺﾞﾏｻﾝｶﾜｲｲﾔｯﾀｰ！"
+                    m = "〇〇ｻﾝｶﾜｲｲﾔｯﾀｰ！"
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await message.channel.send(m)
                     return
@@ -153,7 +153,7 @@ async def on_message(message):
                
           if re.match("(テスト|ﾃｽﾄ)…", message.content):
                if client.user != message.author:
-                    m = "ﾃｽﾄ……"
+                    m = "ﾃｽﾄｫ……"
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await message.channel.send(m)
                     return
@@ -170,7 +170,7 @@ async def on_message(message):
 
           if ':emoji_8:' in message.content:
                if client.user != message.author:
-                    m = "ｴｰﾌｨｻﾝｶﾜｲｲﾔｯﾀｰ!"
+                    m = "ｴｰﾌｨｶﾜｲｲﾔｯﾀｰ!"
                     # メッセージが送られてきたチャンネルへメッセージを送ります
                     await message.channel.send(m)
                     return
